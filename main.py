@@ -15,12 +15,16 @@ def bmi():
     print(f"{bmi_calculation:.2f}")
     calculate_entry.delete(0,tk.END)
     if bmi_calculation<18.5:
+        calculate_entry.config(fg="blue",bg="light blue")
         calculate_entry.insert(0,f"{bmi_calculation:.2f} --> Underweight")
     elif 18.5<= bmi_calculation <=24.9:
+        calculate_entry.config(fg="green",bg="light green")
         calculate_entry.insert(0,f"{bmi_calculation:.2f} --> Normal")
     elif 25<= bmi_calculation <=29.9:
+        calculate_entry.config(fg="orange",bg="light yellow")
         calculate_entry.insert(0,f"{bmi_calculation:.2f} --> Overweight")
     else:
+        calculate_entry.config(fg="red",bg="light pink")
         calculate_entry.insert(0,f"{bmi_calculation:.2f} --> Obese")
     
     
